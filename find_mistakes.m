@@ -15,7 +15,7 @@ img_a = imcrop(img,[0 0 w/2-2 h]);
 img_b = imcrop(img,[w/2+1 0 w/2-3 h]);
 
 %Œ`‚Ì·ˆÙ‚ğ‹‚ß‚é
-%figure;imshowpair(img_a,img_b)
+figure;imshowpair(img_a,img_b)
 figure;imshowpair(img_a,img_b,'diff')
 
 %‰æ‘œa‚Æ‰æ‘œb‚ÌRGB’l‚Æ‹‚ß‚é
@@ -27,5 +27,5 @@ b_g = img_g_b(:,:,2);
 b_b = img_g_b(:,:,3);
 
 %F‚Ì·ˆÙ‚ğ‹‚ß‚é
-img_d = (a_r==b_r & a_g==b_g & a_b==b_b);
-figure;imshow(img_d)
+img_diff = (a_r==b_r & a_g==b_g & a_b==b_b);
+figure;imshow(img_diff)
